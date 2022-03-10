@@ -4,8 +4,7 @@ import Login from './components/Login';
 function App() {
   return (
     <div>
-      <h1>Happy Hucking on React:)</h1>
-      <Login/>
+      <Login username='StellarLay'/>
     </div>
   );
 }
