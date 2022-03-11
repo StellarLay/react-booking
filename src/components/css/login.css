@@ -79,7 +79,7 @@ body {
 
 .login-form__preview-head {
   width: 40%;
-  margin-right: 70px;
+  margin-right: 100px;
 }
 
 .login-form__preview h1 {
@@ -110,7 +110,7 @@ body {
   width: 100%;
   border: none;
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 14px 0;
+  height: 45px;
   color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
   font-size: 0.8em;
@@ -158,6 +158,14 @@ body {
 
 .forgot-link {
   text-decoration: none;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
 }
 
 @media (max-width: 768px) {

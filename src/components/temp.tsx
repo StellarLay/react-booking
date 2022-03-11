@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import './css/login.css';
-import { ThreeDots } from 'react-loader-spinner';
-// import { IUserProps } from '../types/types';
+import { IUserProps } from '../types/types';
 
-type IUserProps = {
-  getUserStatus(isStatus: boolean): void;
-};
-
-const Login = (props: IUserProps) => {
+const Login: FC<IUserProps> = ({ getUserStatus }) => {
   // Стейты
   const [isLogin, setIsLogin] = useState(false);
-  const [isLoader, setIsLoader] = useState(false);
 
   // Обработчик формы
   const LoginSubmit = (e: React.SyntheticEvent) => {
@@ -23,23 +17,14 @@ const Login = (props: IUserProps) => {
 
     if (target.email.value !== '' && target.password.value !== '') {
       setIsLogin(true);
-      setIsLoader(true);
     } else {
       setIsLogin(false);
-      setIsLoader(false);
     }
   };
 
   // Мгновенная отработка стейта
   useEffect(() => {
-    let timer = setTimeout(() => {
-      setIsLoader(false);
-      props.getUserStatus(isLogin);
-    }, 5000);
-
-    return () => {
-      clearTimeout(timer);
-    };
+    getUserStatus(isLogin);
   });
 
   return (
@@ -65,19 +50,9 @@ const Login = (props: IUserProps) => {
               placeholder='• • • • • • • • • • • •'
             />
           </div>
-          {!isLoader ? (
-            <button type='submit' className='login-form__submit-btn'>
-              Sign in
-            </button>
-          ) : (
-            <div className='loader'>
-              <ThreeDots
-                ariaLabel='loading-indicator'
-                color='black'
-                width='30'
-              />
-            </div>
-          )}
+          <button type='submit' className='login-form__submit-btn'>
+            Sign in
+          </button>
           <div className='login-form__remember-block'>
             <div className='login-form__remember-block__rememb'>
               <input type='checkbox' id='remember-checkbox' />
