@@ -1,0 +1,77 @@
+.homeApp {
+  height: 100vh;
+  padding: 3% 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.header__logo-block,
+.header__sign-btns-block {
+  width: 25%;
+}
+
+.header__nav-block {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.header__main-menu {
+  width: 100%;
+}
+
+.header__main-menu__ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__main-menu__ul a {
+  color: rgba(0, 0, 0, 0.4);
+  transition: 0.2s linear;
+}
+
+.header__main-menu__ul a:hover {
+  color: rgba(0, 0, 0, 0.9);
+  transition: 0.2s linear;
+}
+
+.search-icon {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.log-in__btn,
+.sign-up__btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  transition: 0.2s linear;
+  font-size: 0.8em;
+}
+
+.log-in__btn {
+  margin-right: 10px;
+}
+
+.sign-up__btn {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.header__sign-btns-block {
+  display: flex;
+  justify-content: flex-end;
+}

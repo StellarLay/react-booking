@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './css/common.css';
 import './css/login.css';
 import { ThreeDots } from 'react-loader-spinner';
 // import { IUserProps } from '../types/types';

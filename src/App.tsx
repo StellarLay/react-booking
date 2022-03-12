@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Login from './components/Login';
 import Home from './components/homepage/Home';
+import Login from './components/Login';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -11,13 +11,13 @@ function App() {
 
   if (isLogin) {
     return (
-      <div className='App'>
+      <div className='homeApp'>
         <Home />
       </div>
     );
   } else {
     return (
-      <div className='App'>
+      <div className='loginApp'>
         <Login getUserStatus={updateData} />
       </div>
     );

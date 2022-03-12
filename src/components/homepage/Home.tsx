@@ -1,11 +1,12 @@
 import React from 'react';
-// import logo from './img/loginBg.jpg';
+import '../css/common.css';
 import '../css/homepage.css';
+import Header from './Header';
 
 const HomePage = () => {
   return (
     <div className='homepage'>
-      <h1>Hello</h1>
+      <Header />
     </div>
   );
 };
