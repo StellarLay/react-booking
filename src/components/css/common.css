@@ -23,3 +23,65 @@ a {
 li {
   list-style: none;
 }
+
+.sign__submit-btn__dark {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 45px;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  font-size: 0.8em;
+  transition: 0.2s linear;
+}
+
+.sign__submit-btn__light {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+  height: 45px;
+  border: 2px solid #fff;
+  color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  font-size: 0.8em;
+  transition: 0.2s linear;
+}
+
+.sign__submit-btn__dark:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  background-color: rgb(14, 69, 105);
+}
+
+.sign__submit-btn__dark:active {
+  transition: 0.2s linear;
+  transform: scale(0.9);
+}
+
+.sign__submit-btn__light:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+}
+
+.sign__submit-btn__light:active {
+  transition: 0.2s linear;
+  transform: scale(0.9);
+}
+
+select {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 1.1;
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}

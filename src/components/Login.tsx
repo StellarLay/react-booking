@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './css/common.css';
 import './css/login.css';
 import { ThreeDots } from 'react-loader-spinner';
+import SignBtn from './elements/SignBtn';
 // import { IUserProps } from '../types/types';
 
 type IUserProps = {
@@ -13,6 +14,12 @@ const Login = (props: IUserProps) => {
   const [isLogin, setIsLogin] = useState(false);
   const [isLoader, setIsLoader] = useState(false);
 
+  // User
+  const user = {
+    email: 'stellarlay@yandex.ru',
+    password: '12345',
+  };
+
   // Обработчик формы
   const LoginSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
@@ -22,7 +29,10 @@ const Login = (props: IUserProps) => {
       password: { value: string };
     };
 
-    if (target.email.value !== '' && target.password.value !== '') {
+    if (
+      target.email.value === user.email &&
+      target.password.value === user.password
+    ) {
       setIsLogin(true);
       setIsLoader(true);
     } else {
@@ -36,7 +46,7 @@ const Login = (props: IUserProps) => {
     let timer = setTimeout(() => {
       setIsLoader(false);
       props.getUserStatus(isLogin);
-    }, 5000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
@@ -67,9 +77,7 @@ const Login = (props: IUserProps) => {
             />
           </div>
           {!isLoader ? (
-            <button type='submit' className='login-form__submit-btn'>
-              Sign in
-            </button>
+            <SignBtn className='sign__submit-btn__dark' value='Sign in' />
           ) : (
             <div className='loader'>
               <ThreeDots

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import SignBtn from '../elements/SignBtn';
 
 const Header = () => {
   return (
@@ -30,12 +31,17 @@ const Header = () => {
         </nav>
       </div>
       <div className='header__sign-btns-block'>
-        <button type='submit' className='log-in__btn'>
-          Log in
-        </button>
-        <button type='submit' className='sign-up__btn'>
-          Sign up
-        </button>
+        <SignBtn
+          className='sign__submit-btn__light'
+          value='Войти'
+          width='30%'
+          margin='0 10px 0 0'
+        />
+        <SignBtn
+          className='sign__submit-btn__dark'
+          value='Регистрация'
+          width='35%'
+        />
       </div>
     </div>
   );

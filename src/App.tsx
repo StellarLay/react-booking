@@ -9,7 +9,7 @@ function App() {
     setIsLogin(value);
   };
 
-  if (isLogin) {
+  if (!isLogin) {
     return (
       <div className='homeApp'>
         <Home />

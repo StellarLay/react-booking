@@ -1,6 +1,7 @@
 .homeApp {
   height: 100vh;
   padding: 3% 5%;
+  --main-text-color: rgba(255, 255, 255, 0.9);
 }
 
 .header {
@@ -74,4 +75,106 @@
 .header__sign-btns-block {
   display: flex;
   justify-content: flex-end;
+}
+
+/* Head Booking section*/
+.booking-block {
+  margin-top: 60px;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  background: url('../img/loginBg.jpg') no-repeat center top/cover;
+}
+
+.booking-block__title {
+  font-size: 3em;
+  color: var(--main-text-color);
+}
+
+.booking-block__head-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-block__subtext {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 30px;
+}
+
+.booking-block__form {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.select-label {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.2s linear;
+}
+
+.select-block {
+  color: rgba(0, 0, 0, 0.7);
+  transition: 0.2s linear;
+}
+
+.select-block:hover {
+  color: rgba(192, 38, 38, 0.7);
+  transition: 0.2s linear;
+}
+
+.booking-block__form-location,
+.booking-block__form-checkOut {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 20px;
+}
+
+.form-location__select,
+.form-abode__select {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.location-icon,
+.user-icon {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.date-picker__from,
+.date-picker__to {
+  border: none;
+  margin-left: 15px;
+  font-weight: bold;
+  padding-top: 2px;
+  width: 100%;
+}
+
+.date-picker__to {
+  margin-left: 0;
+}
+
+.booking-block__form-location {
+  width: 20%;
+}
+
+.booking-block__form-checkIn,
+.booking-block__form-checkOut {
+  width: 15%;
+}
+
+.booking-block__form-abode {
+  width: 15%;
+}
+
+.search-btn__booking {
+  width: 15%;
+  margin-left: 10%;
 }
