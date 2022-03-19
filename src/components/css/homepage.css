@@ -150,6 +150,7 @@
 
 .date-picker__from,
 .date-picker__to {
+  cursor: pointer;
   border: none;
   margin-left: 15px;
   font-weight: bold;

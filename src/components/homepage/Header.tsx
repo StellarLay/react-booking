@@ -2,8 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import SignBtn from '../elements/SignBtn';
+import { ILoginProps } from '../types/types';
 
-const Header = () => {
+const Header = (props: ILoginProps) => {
   return (
     <div className='header'>
       <div className='header__logo-block'>
@@ -36,6 +37,7 @@ const Header = () => {
           value='Войти'
           width='30%'
           margin='0 10px 0 0'
+          getUserStatus={props.getUserStatus}
         />
         <SignBtn
           className='sign__submit-btn__dark'

@@ -1,56 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, SetStateAction } from 'react';
 import './css/common.css';
 import './css/login.css';
 import { ThreeDots } from 'react-loader-spinner';
 import SignBtn from './elements/SignBtn';
-// import { IUserProps } from '../types/types';
+import { ILoginProps } from './types/types';
 
-type IUserProps = {
-  getUserStatus(isStatus: boolean): void;
+// interface ILoginProps {
+//   getUserStatus: (setIsLogin: boolean) => void;
+// }
+
+// User
+const user = {
+  email: 'stellarlay@yandex.ru',
+  password: '12345',
 };
 
-const Login = (props: IUserProps) => {
-  // Стейты
-  const [isLogin, setIsLogin] = useState(false);
+const Login = (props: ILoginProps) => {
   const [isLoader, setIsLoader] = useState(false);
-
-  // User
-  const user = {
-    email: 'stellarlay@yandex.ru',
-    password: '12345',
-  };
+  const [rememberLogin, setRememberLogin] = useState('');
 
   // Обработчик формы
-  const LoginSubmit = (e: React.SyntheticEvent) => {
+  const LoginSubmit = useCallback((e) => {
     e.preventDefault();
 
     const target = e.target as typeof e.target & {
       email: { value: string };
       password: { value: string };
+      rememberCheck: { checked: boolean };
     };
 
     if (
       target.email.value === user.email &&
       target.password.value === user.password
     ) {
-      setIsLogin(true);
+      if (target.rememberCheck.checked === true) {
+        setRememberLogin(user.email);
+      }
+
+      if (props.getUserStatus) {
+        props.getUserStatus(true);
+      }
+
       setIsLoader(true);
-    } else {
-      setIsLogin(false);
-      setIsLoader(false);
     }
-  };
+  }, []);
 
   // Мгновенная отработка стейта
   useEffect(() => {
-    let timer = setTimeout(() => {
+    setTimeout(() => {
       setIsLoader(false);
-      props.getUserStatus(isLogin);
     }, 3000);
-
-    return () => {
-      clearTimeout(timer);
-    };
   });
 
   return (
@@ -65,6 +64,7 @@ const Login = (props: IUserProps) => {
               name='email'
               type='email'
               placeholder='React@yandex.ru'
+              defaultValue={rememberLogin}
             />
           </div>
           <div className='login-form__inputs-password-block'>
@@ -74,6 +74,7 @@ const Login = (props: IUserProps) => {
               name='password'
               type='password'
               placeholder='• • • • • • • • • • • •'
+              autoComplete='on'
             />
           </div>
           {!isLoader ? (
@@ -89,7 +90,11 @@ const Login = (props: IUserProps) => {
           )}
           <div className='login-form__remember-block'>
             <div className='login-form__remember-block__rememb'>
-              <input type='checkbox' id='remember-checkbox' />
+              <input
+                type='checkbox'
+                id='remember-checkbox'
+                name='rememberCheck'
+              />
               <span className='remember-text'>Remember me</span>
             </div>
             <div className='login-form__remember-block__forgot'>
@@ -103,7 +108,7 @@ const Login = (props: IUserProps) => {
       <div className='login-form__preview'>
         <div className='login-form__preview-head'>
           <h1 className='login-form__preview-head__title'>
-            Find your own hotel
+            Найдите свой отель
           </h1>
           <p className='login-form__preview-head__text'>
             Исследуй самые необычные места по миру с помощью нашего сервиса

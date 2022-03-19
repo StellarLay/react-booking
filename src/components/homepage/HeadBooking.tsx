@@ -40,12 +40,10 @@ const HeadBooking = () => {
 
   // Location&Room select events
   const locationEvent = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(event.target.value);
     setSelectLocOption(event.target.value);
   };
 
   const roomEvent = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log(event.target.value);
     setSelectRoomOption(event.target.value);
   };
 
