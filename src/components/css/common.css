@@ -85,3 +85,14 @@ select {
   background-color: #fff;
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
+
+/* Footer styles */
+.footer {
+  margin-top: 100px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+}

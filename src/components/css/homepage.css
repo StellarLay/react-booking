@@ -1,6 +1,5 @@
 .homeApp {
   height: 100vh;
-  padding: 3% 5%;
   --main-text-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -8,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 3% 5%;
 }
 
 .header__logo-title {
@@ -81,6 +81,7 @@
 .booking-block {
   margin-top: 60px;
   height: 75vh;
+  margin: 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
