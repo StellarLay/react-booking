@@ -18,6 +18,10 @@ import hotelTwo from '../../img/hotel_2.jpg';
 import hotelThree from '../../img/hotel_3.jpg';
 import hotelFour from '../../img/hotel_4.jpg';
 import hotelFive from '../../img/hotel_5.jpg';
+import Map from './rightSidebar/Map';
+import Price from './rightSidebar/Price';
+import Rooms from './rightSidebar/Rooms';
+import Facilities from './rightSidebar/Facilities';
 
 interface IHotelsProps {
   id: number;
@@ -290,7 +294,12 @@ const ContentBooking = () => {
           </div>
         </div>
       </div>
-      <div className='right-sidebar'></div>
+      <div className='right-sidebar'>
+        <Map />
+        <Price />
+        <Rooms />
+        <Facilities />
+      </div>
     </section>
   );
 };

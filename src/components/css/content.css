@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   --main-text-color: rgba(255, 255, 255, 0.9);
+  --black-style-color: rgba(0, 0, 0, 0.85);
 }
 
 .left-content {
@@ -14,7 +15,6 @@
 
 .right-sidebar {
   width: 25%;
-  border: 1px solid red;
 }
 
 .left-content__search-block {
@@ -96,6 +96,16 @@
   position: relative;
   width: 30%;
   margin: 30px 0;
+  transition: 0.2s linear;
+}
+
+.apartments-block__item:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  transform: scale(1.05);
+  -webkit-box-shadow: 1px 17px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 1px 17px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 17px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .apartments-block__item * {
@@ -170,9 +180,24 @@
 
 .pagination__prev,
 .pagination__next {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.05);
   padding: 10px 12px;
   border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+.pagination__prev:hover,
+.pagination__next:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+  transition: 0.2s linear;
+}
+
+.pagination__prev:active,
+.pagination__next:active {
+  transition: 0.2s linear;
+  transform: scale(0.9);
 }
 
 .pagination-page {
@@ -187,4 +212,151 @@
   transition: 0.2s linear;
   background-color: rgba(0, 0, 0, 0.9);
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Right sidebar styles */
+.map-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-block__title,
+.price-block__title,
+.rooms-block__title,
+.facilities-block__title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--black-style-color);
+}
+
+.map-block__img {
+  margin-top: 20px;
+}
+
+.price-block,
+.facilities-block {
+  margin-top: 80px;
+}
+
+.rooms-block {
+  margin-top: 45px;
+}
+
+.price-block__inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.price-block__inputs .price-block__inputs-from,
+.price-block__inputs .price-block__inputs-to {
+  width: 150px;
+  text-indent: 15px;
+  padding: 10px 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.rooms-block__toggles,
+.beds-block__toggles,
+.baths-block__toggles {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rooms-block__toggles-room,
+.beds-block__toggles-bed,
+.baths-block__toggles-bath {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rooms-block__toggles-room .toggles-room__toggles,
+.beds-block__toggles-room .toggles-bed__toggles,
+.baths-block__toggles-room .toggles-bath__toggles {
+  display: flex;
+}
+
+.toggles-room__title,
+.toggles-bed__title,
+.toggles-bath__title {
+  font-weight: bold;
+  color: var(--black-style-color);
+}
+
+.toggles-room__toggles,
+.toggles-bed__toggles,
+.toggles-bath__toggles {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggles-room__toggles *,
+.toggles-bed__toggles *,
+.toggles-bath__toggles * {
+  color: var(--black-style-color);
+}
+
+.toggles-minus,
+.toggles-plus {
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.toggles-minus:hover,
+.toggles-plus:hover {
+  transform: scale(1.3);
+  transition: 0.2s linear;
+}
+
+.beds-block__toggles-bed,
+.baths-block__toggles-bath {
+  margin-top: 25px;
+}
+
+.rooms-block * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.facilities-block__items {
+  margin-top: 35px;
+}
+
+.facilities-block__items__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.facilities-block__items__item__all-facilities {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.facilities-block__items__item__all-facilities:hover * {
+  color: rgba(0, 0, 0, 0.85);
+  transition: 0.2s linear;
+}
+
+.facilities-block__items__item__all-facilities:active * {
+  transition: 0.2s linear;
+  transform: scale(0.9);
+}
+
+.facilities-block__items__item__all-facilities * {
+  color: rgba(0, 0, 0, 0.5);
+  transition: 0.2s linear;
+}
+
+.arrow-right {
+  margin-left: 15px;
+  font-size: 0.8em;
+  padding-top: 1px;
 }

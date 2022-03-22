@@ -7,6 +7,17 @@
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 div {
   box-sizing: border-box;
 }
@@ -89,10 +100,134 @@ select {
 /* Footer styles */
 .footer {
   margin-top: 100px;
-  height: 200px;
+  height: 220px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  color: #fff;
+  padding-top: 40px;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.footer__col-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__col-1__logo {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer__col-1__copyright {
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9em;
+}
+
+.footer__col-1__social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+
+.footer__col-1__social * {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer__col-1__menu {
+  margin-top: 20px;
+}
+
+.footer__col-1__menu * {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer__col-1__menu ul a li {
+  margin-top: 5px;
+  transition: 0.2s linear;
+}
+
+.footer__col-1__menu ul a:hover li {
+  color: rgba(255, 255, 255, 0.9);
+  transition: 0.2s linear;
+}
+
+.footer__col-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__col-2__logo {
+  margin-bottom: 15px;
+}
+
+.footer__col-2__logo,
+.footer__col-3__logo {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer__col-2__phone-1,
+.footer__col-2__phone-2 {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  transition: 0.2s linear;
+}
+
+.footer__col-2__phone-1:hover,
+.footer__col-2__phone-2:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.95);
+  transition: 0.2s linear;
+}
+
+.footer__col-2__email {
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s linear;
+}
+
+.footer__col-2__email:hover {
+  cursor: pointer;
+  transition: 0.2s linear;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.footer__col-3__menu {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.85);
+  margin-top: 15px;
+}
+
+.footer__col-3 ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__col-3 ul * {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.2s linear;
+}
+
+.footer__col-3 ul a li {
+  margin-top: 10px;
+}
+
+.footer__col-3 ul a:hover li {
+  color: rgba(255, 255, 255, 0.95);
+  transition: 0.2s linear;
+}
+
+.footer__col-3 ul:first-child {
+  margin-right: 50px;
+}
+
+/* Style for all checkboxes */
+input[type='checkbox'] {
+  filter: hue-rotate(210deg);
+  transform: scale(1.2);
 }
