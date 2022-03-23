@@ -825,7 +825,7 @@
   }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1201px) and (max-width: 1365px) {
   .burger-icon {
     display: none;
     font-size: 1.5em;
