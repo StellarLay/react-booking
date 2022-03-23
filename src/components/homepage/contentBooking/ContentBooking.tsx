@@ -280,15 +280,6 @@ const ContentBooking = () => {
           <div className='pagination-page'>
             <span>5</span>
           </div>
-          <div className='pagination-page'>
-            <span>6</span>
-          </div>
-          <div className='pagination-page'>
-            <span>7</span>
-          </div>
-          <div className='pagination-page'>
-            <span>8</span>
-          </div>
           <div className='pagination__next'>
             <FontAwesomeIcon icon={faArrowRight} className='arrow-right-icon' />
           </div>

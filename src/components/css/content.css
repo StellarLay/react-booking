@@ -124,6 +124,7 @@
 }
 
 .apartments-block__props {
+  height: 120px;
   padding: 15px 25px;
   background-color: rgba(0, 0, 0, 0.05);
 }

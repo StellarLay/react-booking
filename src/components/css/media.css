@@ -1,0 +1,990 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  .burger-icon {
+    display: block;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+  }
+
+  .header {
+    position: relative;
+    padding: 7% 4%;
+  }
+
+  .search-header-icon {
+    display: none;
+  }
+
+  .header__nav-block {
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__main-menu__hidden {
+    display: none;
+  }
+
+  .header__logo-block {
+    width: 60%;
+    margin-left: 15px;
+  }
+
+  .header__sign-btns-block,
+  .sign__submit-btn__light,
+  .sign__submit-btn__dark {
+    width: 100% !important;
+  }
+
+  .sign__submit-btn__light {
+    width: 70% !important;
+  }
+
+  .booking-block {
+    margin-top: 60px;
+    height: 110vh;
+    margin: 0 3%;
+    padding: 0 3%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background: url('../img/loginBg.jpg') no-repeat center top/cover;
+  }
+
+  .booking-block__title {
+    font-size: 30px;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  .booking-block__subtext {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .booking-block__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .booking-block__form-location,
+  .booking-block__form-checkIn,
+  .booking-block__form-checkOut,
+  .booking-block__form-abode {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-btn__booking {
+    width: 90%;
+    margin: 10px 0;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .content-section {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 60px;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    --main-text-color: rgba(255, 255, 255, 0.9);
+    --black-style-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .left-content__search-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .left-content__search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 15px 0;
+    border: none;
+    padding-right: 10px;
+    text-indent: 10px;
+    background-color: transparent;
+  }
+
+  .left-content__sort-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+  }
+
+  .apartments-block {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .apartments-block__item {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+    transition: 0.2s linear;
+  }
+
+  .pagination {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price-block,
+  .facilities-block {
+    margin-top: 40px;
+  }
+
+  .rooms-block {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 100px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    color: #fff;
+    padding-top: 0;
+    padding: 0 5%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .footer__col-1__copyright {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .burger-icon {
+    display: block;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+  }
+
+  .header {
+    position: relative;
+    padding: 7% 4%;
+  }
+
+  .search-header-icon {
+    display: none;
+  }
+
+  .header__nav-block {
+    position: absolute;
+    width: 100%;
+    top: 90px;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__main-menu__hidden {
+    display: none;
+  }
+
+  .header__logo-block {
+    width: 60%;
+    margin-left: 15px;
+  }
+
+  .header__sign-btns-block,
+  .sign__submit-btn__light,
+  .sign__submit-btn__dark {
+    width: 100% !important;
+  }
+
+  .sign__submit-btn__light {
+    width: 70% !important;
+  }
+
+  .booking-block {
+    margin-top: 60px;
+    height: 110vh;
+    margin: 0 3%;
+    padding: 0 3%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background: url('../img/loginBg.jpg') no-repeat center top/cover;
+  }
+
+  .booking-block__title {
+    font-size: 30px;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  .booking-block__subtext {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .booking-block__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .booking-block__form-location,
+  .booking-block__form-checkIn,
+  .booking-block__form-checkOut,
+  .booking-block__form-abode {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-btn__booking {
+    width: 90%;
+    margin: 10px 0;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .content-section {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 60px;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    --main-text-color: rgba(255, 255, 255, 0.9);
+    --black-style-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .left-content__search-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-content__search {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    padding-right: 10px;
+    text-indent: 10px;
+    background-color: transparent;
+  }
+
+  .left-content__sort-btn {
+    width: 40%;
+    margin-top: 0px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+  }
+
+  .apartments-block {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .apartments-block__item {
+    position: relative;
+    width: 48%;
+    margin: 15px 0;
+    transition: 0.2s linear;
+  }
+
+  .pagination {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price-block,
+  .facilities-block {
+    margin-top: 40px;
+  }
+
+  .rooms-block {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 100px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    color: #fff;
+    padding-top: 0;
+    padding: 0 5%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .footer__col-1__copyright {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .burger-icon {
+    display: none;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+  }
+
+  .header {
+    position: relative;
+    padding: 4% 4%;
+  }
+
+  .search-header-icon {
+    display: none;
+  }
+
+  .header__main-menu {
+    display: block;
+  }
+
+  .header__nav-block {
+    width: 70%;
+    top: 90px;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__logo-block {
+    width: 30%;
+    margin-left: 0;
+  }
+
+  .header__sign-btns-block {
+    width: 30% !important;
+  }
+
+  .sign__submit-btn__light,
+  .sign__submit-btn__dark {
+    width: 90% !important;
+  }
+
+  .sign__submit-btn__light {
+    width: 70% !important;
+  }
+
+  .booking-block {
+    margin-top: 60px;
+    height: 110vh;
+    margin: 0 3%;
+    padding: 0 3%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background: url('../img/loginBg.jpg') no-repeat center top/cover;
+  }
+
+  .booking-block__title {
+    font-size: 30px;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  .booking-block__subtext {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .booking-block__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .booking-block__form-location,
+  .booking-block__form-checkIn,
+  .booking-block__form-checkOut,
+  .booking-block__form-abode {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .booking-block__form-checkIn,
+  .booking-block__form-abode {
+    padding-left: 10px;
+  }
+
+  .search-btn__booking {
+    width: 65%;
+    margin: 10px 0;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .content-section {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 60px;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    --main-text-color: rgba(255, 255, 255, 0.9);
+    --black-style-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .left-content__search-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-content__search {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    padding-right: 10px;
+    text-indent: 10px;
+    background-color: transparent;
+  }
+
+  .left-content__sort-btn {
+    width: 30%;
+    margin-top: 0px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+  }
+
+  .apartments-block {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .apartments-block__item {
+    position: relative;
+    width: 30%;
+    margin: 15px 0;
+    transition: 0.2s linear;
+  }
+
+  .pagination {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price-block,
+  .facilities-block {
+    margin-top: 40px;
+  }
+
+  .rooms-block {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 100px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding-top: 0;
+    padding: 0 5%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .footer__col-1__copyright {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .burger-icon {
+    display: none;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+  }
+
+  .header {
+    position: relative;
+    padding: 4% 4%;
+  }
+
+  .search-header-icon {
+    display: none;
+  }
+
+  .header__main-menu {
+    display: block;
+  }
+
+  .header__nav-block {
+    width: 70%;
+    top: 90px;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__logo-block {
+    width: 30%;
+    margin-left: 0;
+  }
+
+  .header__sign-btns-block {
+    width: 30% !important;
+  }
+
+  .sign__submit-btn__light,
+  .sign__submit-btn__dark {
+    width: 90% !important;
+  }
+
+  .sign__submit-btn__light {
+    width: 70% !important;
+  }
+
+  .booking-block {
+    margin-top: 60px;
+    height: 110vh;
+    margin: 0 3%;
+    padding: 0 3%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background: url('../img/loginBg.jpg') no-repeat center top/cover;
+  }
+
+  .booking-block__title {
+    font-size: 3em;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  .booking-block__subtext {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .booking-block__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .booking-block__form-location,
+  .booking-block__form-checkIn,
+  .booking-block__form-checkOut,
+  .booking-block__form-abode {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .booking-block__form-checkIn,
+  .booking-block__form-abode {
+    padding-left: 10px;
+  }
+
+  .search-btn__booking {
+    width: 65%;
+    margin: 10px 0;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .content-section {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 60px;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    --main-text-color: rgba(255, 255, 255, 0.9);
+    --black-style-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .left-content__search-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-content__search {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    padding-right: 10px;
+    text-indent: 10px;
+    background-color: transparent;
+  }
+
+  .left-content__sort-btn {
+    width: 30%;
+    margin-top: 0px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+  }
+
+  .apartments-block {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .apartments-block__item {
+    position: relative;
+    width: 30%;
+    margin: 15px 0;
+    transition: 0.2s linear;
+  }
+
+  .pagination {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price-block,
+  .facilities-block {
+    margin-top: 40px;
+  }
+
+  .rooms-block {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 100px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding-top: 0;
+    padding: 0 5%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .footer__col-1__copyright {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7em;
+  }
+}
+
+@media (min-width: 1201px) {
+  .burger-icon {
+    display: none;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+  }
+
+  .header {
+    position: relative;
+    padding: 4% 4%;
+  }
+
+  .search-header-icon {
+    display: none;
+  }
+
+  .header__main-menu {
+    display: block;
+  }
+
+  .header__nav-block {
+    width: 70%;
+    top: 90px;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__logo-block {
+    width: 30%;
+    margin-left: 0;
+  }
+
+  .header__sign-btns-block {
+    width: 30% !important;
+  }
+
+  .sign__submit-btn__light,
+  .sign__submit-btn__dark {
+    width: 90% !important;
+  }
+
+  .sign__submit-btn__light {
+    width: 70% !important;
+  }
+
+  .booking-block__title {
+    font-size: 3em;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  .booking-block__subtext {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .content-section {
+    position: relative;
+    min-height: 100vh;
+    margin-top: 60px;
+    padding: 0 3%;
+    display: flex;
+    justify-content: space-between;
+    --main-text-color: rgba(255, 255, 255, 0.9);
+    --black-style-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .left-content {
+    width: 65%;
+  }
+
+  .right-sidebar {
+    width: 25%;
+  }
+
+  .left-content__search-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .left-content__search {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    padding-right: 10px;
+    text-indent: 10px;
+    background-color: transparent;
+  }
+
+  .left-content__sort-btn {
+    width: 30%;
+    margin-top: 0px;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+  }
+
+  .apartments-block {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .apartments-block__item {
+    position: relative;
+    width: 30%;
+    margin: 15px 0;
+    transition: 0.2s linear;
+  }
+
+  .pagination {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price-block,
+  .facilities-block {
+    margin-top: 40px;
+  }
+
+  .rooms-block {
+    margin-top: 10px;
+  }
+
+  .footer {
+    margin-top: 100px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding-top: 0;
+    padding: 0 5%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .footer__col-1__copyright {
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7em;
+  }
+}
