@@ -1,7 +1,7 @@
 {
   "main.css": "/react-booking/static/css/main.578258b2.chunk.css",
-  "main.js": "/react-booking/static/js/main.54a38cc3.chunk.js",
-  "main.js.map": "/react-booking/static/js/main.54a38cc3.chunk.js.map",
+  "main.js": "/react-booking/static/js/main.a92aaa73.chunk.js",
+  "main.js.map": "/react-booking/static/js/main.a92aaa73.chunk.js.map",
   "static/css/1.cf13553f.chunk.css": "/react-booking/static/css/1.cf13553f.chunk.css",
   "static/js/1.bf2be395.chunk.js": "/react-booking/static/js/1.bf2be395.chunk.js",
   "static/js/1.bf2be395.chunk.js.map": "/react-booking/static/js/1.bf2be395.chunk.js.map",
@@ -17,6 +17,6 @@
   "static/css/main.578258b2.chunk.css.map": "/react-booking/static/css/main.578258b2.chunk.css.map",
   "static/css/1.cf13553f.chunk.css.map": "/react-booking/static/css/1.cf13553f.chunk.css.map",
   "index.html": "/react-booking/index.html",
-  "precache-manifest.d756ebecb832bc2c40837d9e5ab59b00.js": "/react-booking/precache-manifest.d756ebecb832bc2c40837d9e5ab59b00.js",
+  "precache-manifest.30ff589a71dbc18dc228d3928e4f35b8.js": "/react-booking/precache-manifest.30ff589a71dbc18dc228d3928e4f35b8.js",
   "service-worker.js": "/react-booking/service-worker.js"
 }
