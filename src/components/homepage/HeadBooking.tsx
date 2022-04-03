@@ -3,6 +3,8 @@ import SignBtn from '../elements/SignBtn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Select from 'react-select';
+import { SelectOptions } from '../types/types';
 import {
   faLocationDot,
   faUser,
@@ -12,11 +14,22 @@ import { registerLocale, setDefaultLocale } from 'react-datepicker';
 import ru from 'date-fns/locale/ru';
 registerLocale('ru', ru);
 
-interface SelectOptions {
-  id: number;
-  value: string;
-  label: string;
-}
+const customStylesSelect = {
+  option: (provided: any, state: any) => ({
+    ...provided,
+    padding: 12,
+    width: '100%',
+    color: state.isFocused ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.7)',
+    backgroundColor: state.isFocused ? 'rgba(10, 59, 89, 0.7)' : null,
+  }),
+  control: (base: any) => ({
+    ...base,
+    width: 195,
+    border: 0,
+    boxShadow: 'none',
+    cursor: 'pointer',
+  }),
+};
 
 const HeadBooking = () => {
   const locationOptions: SelectOptions[] = [
@@ -28,23 +41,31 @@ const HeadBooking = () => {
   ];
 
   const roomOptions: SelectOptions[] = [
-    { id: 1, value: 'single room', label: 'single room' },
-    { id: 2, value: 'duo room', label: 'duo room' },
-    { id: 3, value: 'child room', label: 'child room' },
+    {
+      id: 1,
+      value: 'для одного',
+      label: 'для одного',
+    },
+    {
+      id: 2,
+      value: 'для двоих',
+      label: 'для двоих',
+    },
+    { id: 3, value: 'Люкс', label: 'Люкс' },
   ];
 
-  const [selectLocOption, setSelectLocOption] = useState('');
-  const [selectRoomOption, setSelectRoomOption] = useState('');
+  const [selectLocOption, setSelectLocOption] = useState(locationOptions[0]);
+  const [selectRoomOption, setSelectRoomOption] = useState(roomOptions[0]);
   const [startDateIn, setStartDateIn] = useState(new Date());
   const [startDateOut, setStartDateOut] = useState(new Date());
 
   // Location&Room select events
-  const locationEvent = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectLocOption(event.target.value);
+  const locationEvent = (event: any) => {
+    setSelectLocOption(event.value);
   };
 
-  const roomEvent = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectRoomOption(event.target.value);
+  const roomEvent = (event: any) => {
+    setSelectRoomOption(event.value);
   };
 
   return (
@@ -61,18 +82,13 @@ const HeadBooking = () => {
           <span className='select-label form-location__text'>Расположение</span>
           <div className='form-location__select'>
             <FontAwesomeIcon icon={faLocationDot} className='location-icon' />
-            <select
-              name='location'
-              value={selectLocOption}
-              onChange={(e) => locationEvent(e)}
+            <Select
+              defaultValue={selectLocOption}
+              options={locationOptions}
+              onChange={(option) => locationEvent(option)}
               className='select-block'
-            >
-              {locationOptions.map((option) => (
-                <option key={option.id} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+              styles={customStylesSelect}
+            />
           </div>
         </div>
         <div className='booking-block__form-checkIn'>
@@ -104,18 +120,13 @@ const HeadBooking = () => {
           <span className='select-label form-abode__text'>Номер</span>
           <div className='form-abode__select'>
             <FontAwesomeIcon icon={faUser} className='user-icon' />
-            <select
-              name='abode'
-              value={selectRoomOption}
-              onChange={(e) => roomEvent(e)}
+            <Select
+              defaultValue={selectRoomOption}
+              options={roomOptions}
+              onChange={(option) => roomEvent(option)}
               className='select-block'
-            >
-              {roomOptions.map((option) => (
-                <option key={option.id} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
+              styles={customStylesSelect}
+            />
           </div>
         </div>
         <div className='search-btn__booking'>

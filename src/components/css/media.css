@@ -25,6 +25,16 @@
     justify-content: center;
   }
 
+  .booking-block__form-location {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .booking-block__form-abode {
+    border-left: none;
+    padding-left: 0;
+  }
+
   .header__main-menu__hidden {
     display: none;
   }
@@ -146,7 +156,7 @@
   .left-content__sort-btn {
     width: 100%;
     margin-top: 10px;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
   }
@@ -216,6 +226,16 @@
     padding: 7% 4%;
   }
 
+  .booking-block__form-location {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .booking-block__form-abode {
+    border-left: none;
+    padding-left: 0;
+  }
+
   .search-header-icon {
     display: none;
   }
@@ -278,9 +298,10 @@
   .booking-block__form {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 30px;
     background-color: #fff;
     border-radius: 8px;
@@ -290,7 +311,7 @@
   .booking-block__form-checkIn,
   .booking-block__form-checkOut,
   .booking-block__form-abode {
-    width: 100%;
+    width: 50%;
     margin: 10px 0;
   }
 
@@ -328,7 +349,7 @@
   }
 
   .left-content__search {
-    width: 55%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -341,6 +362,7 @@
 
   .search-input {
     width: 100%;
+    height: 50px;
     border: none;
     padding-right: 10px;
     text-indent: 10px;
@@ -348,9 +370,10 @@
   }
 
   .left-content__sort-btn {
-    width: 40%;
+    width: 45%;
+    height: 50px;
     margin-top: 0px;
-    padding: 15px 0;
+    padding: 15px 5px;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
   }
@@ -538,7 +561,8 @@
   }
 
   .left-content__search {
-    width: 65%;
+    width: 60%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -558,9 +582,10 @@
   }
 
   .left-content__sort-btn {
-    width: 30%;
+    width: 35%;
     margin-top: 0px;
-    padding: 15px 0;
+    height: 50px;
+    padding: 15px 5px;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
   }
