@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   FontAwesomeIcon,
   FontAwesomeIconProps,
@@ -17,10 +17,12 @@ import hotelTwo from '../../img/hotel_2.jpg';
 import hotelThree from '../../img/hotel_3.jpg';
 import hotelFour from '../../img/hotel_4.jpg';
 import hotelFive from '../../img/hotel_5.jpg';
+//-- Components
 import Map from './rightSidebar/Map';
 import Price from './rightSidebar/Price';
 import Rooms from './rightSidebar/Rooms';
 import Facilities from './rightSidebar/Facilities';
+//-- Components
 import { motion } from 'framer-motion';
 import Select from 'react-select';
 
@@ -236,24 +238,45 @@ const ContentBooking = () => {
   const [hotels, setHotels] = useState(hotelsList);
   const [nameHotelSearch, setNameHotelSearch] = useState('');
   const [selectSort, setSelectSort] = useState(sortOptions[0]);
-  const [isFilter, setIsFilter] = useState(true);
+  const [selectValue, setSelectValue] = useState('');
+  const [isFilter, setIsFilter] = useState(false);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(0);
+  const [isClear, setIsClear] = useState(false);
 
-  // Сортировка отелей
-  let hotelsFilter = hotels.filter(
-    (hotelname) => hotelname.name == nameHotelSearch
-  );
+  // Фильтр и сортировка отелей
+  const hotelsFilter = useMemo(() => {
+    // Если вводим имя отеля
+    if (nameHotelSearch) {
+      return hotels.filter((i) => i.name == nameHotelSearch);
+    }
+    // Если сортируем
+    else if (selectValue) {
+      if (selectValue === 'Новые') {
+        return hotels.sort((a, b) => (a.DateAdded > b.DateAdded ? 1 : -1));
+      } else if (selectValue === 'Возрастание цены') {
+        return hotels.sort((a, b) => (a.price > b.price ? 1 : -1));
+      } else {
+        return hotels.sort((a, b) => (a.price > b.price ? -1 : 1));
+      }
+    }
+    // Если нажимаем "Сбросить"
+    else if (isClear) {
+      return hotels;
+    }
+    // Если изменяем ползунок цены
+    else if (minPrice && maxPrice) {
+      return hotels.filter(
+        (hotel) => hotel.price >= minPrice && hotel.price <= maxPrice
+      );
+    } else {
+      return hotels;
+    }
+  }, [hotels, nameHotelSearch, selectSort, minPrice, maxPrice, isClear]);
 
   const sortEvent = (e: any) => {
-    if (e.value === 'Новые') {
-      hotelsFilter = hotels.sort((a, b) =>
-        a.DateAdded > b.DateAdded ? 1 : -1
-      );
-    } else if (e.value === 'Возрастание цены') {
-      hotelsFilter = hotels.sort((a, b) => (a.price > b.price ? 1 : -1));
-    } else if (e.value === 'Убывание цены') {
-      hotelsFilter = hotels.sort((a, b) => (a.price > b.price ? -1 : 1));
-    }
     setSelectSort(e.value);
+    setSelectValue(e.value);
   };
 
   // Событие поля поиска
@@ -261,12 +284,14 @@ const ContentBooking = () => {
     setNameHotelSearch(e.target.value);
   };
 
+  // Эффект
   useEffect(() => {
-    // Если мы вводим отель, но его нет, то выведем сообщение
     if (nameHotelSearch !== '' && hotelsFilter.length === 0) {
-      setIsFilter(false);
-    } else {
       setIsFilter(true);
+    } else if (nameHotelSearch === '' && hotelsFilter.length === 0) {
+      setIsFilter(true);
+    } else {
+      setIsFilter(false);
     }
   });
 
@@ -296,8 +321,8 @@ const ContentBooking = () => {
           </div>
         </div>
         <motion.div layout className='apartments-block'>
-          {isFilter ? (
-            (nameHotelSearch !== '' ? hotelsFilter : hotels).map((item) => (
+          {!isFilter ? (
+            hotelsFilter.map((item) => (
               <motion.div
                 animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
@@ -341,7 +366,7 @@ const ContentBooking = () => {
             </div>
           )}
         </motion.div>
-        {isFilter && (
+        {!isFilter && (
           <div className='pagination'>
             <div className='pagination__prev'>
               <FontAwesomeIcon icon={faArrowLeft} className='arrow-left-icon' />
@@ -372,7 +397,11 @@ const ContentBooking = () => {
       </div>
       <div className='right-sidebar'>
         <Map />
-        <Price />
+        <Price
+          minPrice={setMinPrice}
+          maxPrice={setMaxPrice}
+          resetFilter={setIsClear}
+        />
         <Rooms />
         <Facilities />
       </div>

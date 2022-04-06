@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Range, getTrackBackground } from 'react-range';
 
 const STEP = 1;
 const MIN = 1;
-const MAX = 75000;
+const MAX = 300000;
 
-const Price = () => {
-  const [values, setValues] = useState([1, 45000]);
+const Price = (props: any) => {
+  const [values, setValues] = useState([1, 145000]);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(0);
 
@@ -14,6 +14,14 @@ const Price = () => {
     setValues(values);
     setMinValue(values[0]);
     setMaxValue(values[1]);
+    props.minPrice(minValue);
+    props.maxPrice(maxValue);
+    props.resetFilter(false);
+  };
+
+  // Передаем пропс, которые активирует сброс фильтра цены
+  const resetBtn = () => {
+    props.resetFilter(true);
   };
 
   return (
@@ -115,6 +123,9 @@ const Price = () => {
           )}
         />
       </div>
+      <button className='clear-btn' onClick={resetBtn}>
+        Сбросить
+      </button>
     </div>
   );
 };
