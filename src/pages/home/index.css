@@ -87,7 +87,7 @@
   align-items: center;
   justify-content: space-evenly;
   border-radius: 20px;
-  background: url('../img/loginBg.jpg') no-repeat center top/cover;
+  background: url('../../app/img/loginBg.jpg') no-repeat center top/cover;
 }
 
 .booking-block__title {

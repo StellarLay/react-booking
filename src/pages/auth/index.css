@@ -59,7 +59,7 @@
   justify-content: center;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  background: url('../img/loginBg.jpg') no-repeat center top/cover;
+  background: url('../../app/img/loginBg.jpg') no-repeat center top/cover;
 }
 
 .login-form__preview * {
@@ -188,7 +188,7 @@
     justify-content: center;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background: url('../img/loginBg.jpg') no-repeat center top/cover;
+    background: url('../../app/img/loginBg.jpg') no-repeat center top/cover;
   }
 
   .login-form__preview * {

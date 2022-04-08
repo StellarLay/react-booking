@@ -1,13 +1,9 @@
-import React, { useState, useEffect, useCallback, SetStateAction } from 'react';
-import './css/common.css';
-import './css/login.css';
+import React, { useState, useEffect, useCallback } from 'react';
+// import './css/common.css';
+import './index.css';
 import { ThreeDots } from 'react-loader-spinner';
-import SignBtn from './elements/SignBtn';
-import { ILoginProps } from './types/types';
-
-// interface ILoginProps {
-//   getUserStatus: (setIsLogin: boolean) => void;
-// }
+import SignBtn from '../../shared/components/elements/SignBtn';
+import { ILoginProps } from '../../app/types';
 
 // User
 const user = {

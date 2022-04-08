@@ -1,5 +1,5 @@
 import React from 'react';
-import mapLogo from '../../../img/map.png';
+import mapLogo from '../../../../../app/img/map.png';
 
 const Map = () => {
   return (

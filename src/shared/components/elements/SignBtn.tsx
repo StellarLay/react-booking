@@ -1,6 +1,6 @@
 import React, { CSSProperties } from 'react';
-import Login from '../Login';
-import { ILoginProps } from '../types/types';
+import Login from '../../../pages/auth';
+import { ILoginProps } from '../../../app/types';
 
 type ISignBtnProps = {
   className: string;

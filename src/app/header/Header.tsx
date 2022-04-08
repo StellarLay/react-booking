@@ -1,13 +1,27 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
-import SignBtn from '../elements/SignBtn';
-import { ILoginProps } from '../types/types';
+import SignBtn from '../../shared/components/elements/SignBtn';
+import { ILoginProps } from '../types';
+import { Link } from 'react-router-dom';
 
 type menuProps = {
   open: string;
   close: string;
 };
+
+type MenuListProps = {
+  id: number;
+  title: string;
+  path: string;
+};
+
+const menuList: MenuListProps[] = [
+  { id: 1, title: 'О нас', path: '/about' },
+  { id: 2, title: 'Новости', path: '/news' },
+  { id: 3, title: 'Отзывы', path: '/reviews' },
+  { id: 4, title: 'Места', path: '/places' },
+];
 
 const menuBurgerClass: menuProps = {
   open: 'header__main-menu',
@@ -18,7 +32,7 @@ const Header = (props: ILoginProps) => {
   const [isBurger, setIsBurger] = useState(false);
 
   const clickBurger = () => {
-    isBurger === false ? setIsBurger(true) : setIsBurger(false);
+    setIsBurger(isBurger === false ? true : false);
   };
 
   return (
@@ -40,18 +54,11 @@ const Header = (props: ILoginProps) => {
           }
         >
           <ul className='header__main-menu__ul'>
-            <a href='/'>
-              <li>О нас</li>
-            </a>
-            <a href='/'>
-              <li>Новости</li>
-            </a>
-            <a href='/'>
-              <li>Отзывы</li>
-            </a>
-            <a href='/'>
-              <li>Места</li>
-            </a>
+            {menuList.map((item) => (
+              <Link key={item.id} to={item.path}>
+                <li>{item.title}</li>
+              </Link>
+            ))}
             <FontAwesomeIcon
               icon={faSearch}
               className='search-icon search-header-icon'

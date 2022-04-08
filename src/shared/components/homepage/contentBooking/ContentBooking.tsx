@@ -10,13 +10,13 @@ import {
   faArrowLeft,
   faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
-import { SelectOptions } from '../../types/types';
-import background from '../../img/loginBg.jpg';
-import hotelOne from '../../img/hotel_1.jpg';
-import hotelTwo from '../../img/hotel_2.jpg';
-import hotelThree from '../../img/hotel_3.jpg';
-import hotelFour from '../../img/hotel_4.jpg';
-import hotelFive from '../../img/hotel_5.jpg';
+import { SelectOptions } from '../../../../app/types';
+import background from '../../../../app/img/loginBg.jpg';
+import hotelOne from '../../../../app/img/hotel_1.jpg';
+import hotelTwo from '../../../../app/img/hotel_2.jpg';
+import hotelThree from '../../../../app/img/hotel_3.jpg';
+import hotelFour from '../../../../app/img/hotel_4.jpg';
+import hotelFive from '../../../../app/img/hotel_5.jpg';
 //-- Components
 import Map from './rightSidebar/Map';
 import Price from './rightSidebar/Price';

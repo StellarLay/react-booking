@@ -79,6 +79,7 @@
   width: 60%;
   background: none;
   color: rgba(255, 255, 255, 0.85);
+  z-index: 111;
 }
 
 .left-content__sort-btn .select-block option {
@@ -319,11 +320,11 @@
   margin-top: 25px;
 }
 
-.rooms-block * {
+/* .rooms-block * {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
+} */
 
 .facilities-block__items {
   margin-top: 35px;

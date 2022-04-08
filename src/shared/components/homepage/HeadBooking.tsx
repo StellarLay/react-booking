@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
-import { SelectOptions } from '../types/types';
+import { SelectOptions } from '../../../app/types';
 import {
   faLocationDot,
   faUser,
